@@ -15,3 +15,9 @@ This is a file to learn how to use your new web of human resources.
 
 6-Finally, you have a subimit and reset butom to give as you information to contact us and load in the data base.
 ![Sin título5](https://user-images.githubusercontent.com/101296054/160406926-a19cd64b-7131-44ac-a482-c8ed2370a954.jpg)
+
+Contact 
+  Alvaro Guardia
+  Mail: alvaroguardia95@gmail.com
+
+Copyright 2022 Trackgenix SA. Al rights reserved
