@@ -1,4 +1,11 @@
 # Readme Radium Rocket RRHH
+
+# Trackgenix
+
+Trackgenix is a time tracking and team management web applicatiion. This app is a weekly asignment from the bootcamp "Become a Software Developer March 2022" dictated by Radium Ricket. This repository contains the html code and css files that forms the fundations of the landing desktop page of this app.
+
+## Usage
+
 This is a file to learn how to use your new web of human resources. 
 
 1-First, open the file "index" inside the folder called 'Semana-02'
@@ -16,8 +23,17 @@ This is a file to learn how to use your new web of human resources.
 6-Finally, you have a subimit and reset butom to give as you information to contact us and load in the data base.
 ![Sin título5](https://user-images.githubusercontent.com/101296054/160406926-a19cd64b-7131-44ac-a482-c8ed2370a954.jpg)
 
-\\*Commit 3\\
-Contact 
+
+### WEEK 02
+
+Created Html based on a Figma desing. 
+
+### WEEK 03
+
+Created a css file to make the html created in WEEK 02 get style and form based in the figma desing. This file was created without any java script file so far, and also without responsive code and flexbox. This desing was made to be executed in a browser with a definition of 1440px.
+
+## Contact info
+
   Alvaro Guardia
   Mail: alvaroguardia95@gmail.com
 
