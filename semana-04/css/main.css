@@ -1,0 +1,255 @@
+.wraper{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main h1 {
+    color: rgb(55, 56, 103);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.main h2 {
+    max-width: 394px;
+    color: rgb(55, 56, 103);
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.main h4 {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: rgb(55, 56, 103);
+}
+
+.main p {
+    color: rgb(55, 56, 103);
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px;
+    border-bottom: 1px solid
+    
+}
+
+.main-section p {
+    width: 340px;
+    color: rgb(55, 56, 103);
+}
+
+.main-section div{
+  width: 340px;
+}
+
+.img1 {
+    width: 350px;
+    margin: 40px 0;
+}
+
+.learn-more {
+    padding: 7px 18px;
+    margin-top: 30px;
+    border: 3px solid #AACE9B;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: #FFFFFF;
+    color: #AACE9B;
+    font-weight: bold;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(55, 56, 103);
+    border-bottom: 1px solid
+}
+
+.features img {
+    float: left;
+    margin: 30px;
+}
+
+.features p {
+    max-width: 320px;
+}
+
+.festures ul,
+.features-div
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.features li {
+    display:flex;
+    flex-wrap:wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.features li div {
+    display: flex;
+    padding: 10px;
+}
+
+.features h4 {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.features h5 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    overflow: hidden;
+    margin: 30px;
+    width: 94.19px;
+    height: 94.19px;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: relative;
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
+}
+
+.image-container img {
+    position: relative;
+    top: -30px;
+    left: -30px;
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.election {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    color: rgb(55, 56, 103);
+    padding-bottom: 15px;
+    border-bottom: 1px solid
+}
+
+.election img {
+    width: 350px;
+    height: 230px;
+    padding-right: 5px;
+    margin-right: 5px;
+    border-right: solid;
+}
+
+.election h5 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.election li {
+    padding-right: 30px;
+    padding-left: 30px;
+    border-right: solid;
+}
+
+.election h4 {
+    font-weight: bold;
+}
+
+.election p{
+    max-width: 340px;
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-top: 1px solid;
+    align-items: center;
+    text-align: center;
+}
+
+* .history h6 {
+    margin: 20px;
+}
+
+.history p {
+    margin: 10 0 40 0;
+} 
+
+.crucial1 {
+    width: 350px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.crucial2 {
+    /* bottom: 15px;
+    left: 20px; */
+    width: 350px;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 80;
+}
+
+.products-div1{
+    padding: 0px 150px 0 20px;
+}
+
+.products-div2{
+    padding: 0px 200px 0 20px;
+}
+
+.products-div3{
+    padding: 0 20px;
+}
+
+.products ol {
+    list-style-type: decimal;
+}
+
+.products li {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(55, 56, 103);
+}
+
+.products a {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
