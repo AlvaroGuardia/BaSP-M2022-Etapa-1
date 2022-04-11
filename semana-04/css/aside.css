@@ -4,11 +4,21 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.aside-menu{
+    width: 82px;
+}
+
+.aside-get{
+width: 180px;
+}
+
 .aside h3 {
-    padding: 20px;
+    padding: 7px;
+    margin-right: 80px;
     font-weight: bold;
     font-size: 30px;
     color: rgb(55, 56, 103);
+    border-bottom: 5px solid rgb(170, 206, 155);
 }
 
 .aside li {
@@ -29,15 +39,6 @@
     margin: 5px;
 }
 
-.menubar hr {
-    position: relative;
-    height: 5px;
-    width: 80px;
-    left: -95px;
-    background-color: rgb(170, 206, 155);
-    border: 0px;
-}
-
 .list-item li {
     width: 90%;
     margin-left: 10px;
@@ -50,15 +51,6 @@
 .list-item a {
     color: gray;
     text-decoration: none;
-}
-
-.getbar hr {
-    position: relative;
-    height: 5px;
-    width: 180px;
-    left: -45px;
-    background-color: rgb(170, 206, 155);
-    border: 0px;
 }
 
 .tel {

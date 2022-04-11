@@ -32,6 +32,10 @@ Created Html based on a Figma desing.
 
 Created a css file to make the html created in WEEK 02 get style and form based in the figma desing. This file was created without any java script file so far, and also without responsive code and flexbox. This desing was made to be executed in a browser with a definition of 1440px.
 
+### WEEK 04
+
+Remake the css using the command flex-box and making corrections in the html to make the webpag responsive in the resolutions 440px for mobiles, 768px for tablets and 1040px for desktops.
+
 ## Contact info
 
   Alvaro Guardia

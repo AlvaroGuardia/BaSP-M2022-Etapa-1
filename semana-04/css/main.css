@@ -71,6 +71,11 @@
     font-weight: bold;
 }
 
+.features-container{
+    display: flex;
+    
+}
+
 .features {
     display: flex;
     flex-direction: column;
