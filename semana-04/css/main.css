@@ -93,7 +93,6 @@
     max-width: 205px;
 }
 
-.festures ul,
 .features-div
 {
     display: flex;
@@ -192,26 +191,52 @@
     text-align: center;
 }
 
-* .history h6 {
+.history h6 {
     margin: 20px;
 }
 
+
 .history p {
-    margin: 10 0 40 0;
+    margin: 10px 0 40 0;
 } 
+
+.history-beg{
+  text-align: justify;
+  margin: 0 40px;
+
+}
 
 .crucial1 {
     width: 350px;
+    height: 200px;
     padding-right: 20px;
     text-align: center;
 }
 
 .crucial2 {
-    /* bottom: 15px;
-    left: 20px; */
     width: 350px;
     padding-left: 20px;
     text-align: center;
+}
+
+.crucial-moments{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.crucial-moments2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.crucial-moments p,.crucial-moments2 p{
+    width:49%;
+    text-align: justify;
 }
 
 .products{
@@ -257,4 +282,42 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+@media (min-width: 1440px) {
+    .wraper {
+      margin: 20px 20px 0 300px;
+    }
+    .aside {
+      display: block;
+      width:300px;
+      font-family: 'Roboto', sans-serif;
+    }
+    .election img {
+        width: 255px;
+        height: 230px;
+        padding-right: 5px;
+        margin-right: 5px;
+        border-right: solid;
+    }
+    .election p{
+        max-width: 255px;
+    }
+    .features li div {
+        display: flex;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 440px) {
+    .crucial-moments p,.crucial-moments2 p{
+        width:80%;
+        text-align: center;
+    }
+    /* .products-div1 {
+        padding: 0px 50px 0 85px;
+    }
+    .products-div2 {
+        padding: 0px 125px 0 110px;
+    } */
 }
