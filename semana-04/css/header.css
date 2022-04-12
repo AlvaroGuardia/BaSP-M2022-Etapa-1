@@ -19,13 +19,13 @@
     font-weight: bold;
 }
 
-.header-title{
+.header-title {
     display: flex;
     align-items: center;
 }
 
-.icon{
-    margin: 10px 0px 10px 15%;
+.icon {
+    margin: 10px 0px 10px 23%;
 }
 
 .icon img {

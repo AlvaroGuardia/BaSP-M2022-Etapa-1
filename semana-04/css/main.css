@@ -5,12 +5,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-}
-
 .main h1 {
     color: rgb(55, 56, 103);
     font-size: 40px;
@@ -22,18 +16,17 @@
     color: rgb(55, 56, 103);
     font-weight: bold;
     font-size: 45px;
+    text-align: center;
 }
 
 .main h4 {
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px 5px 20px 0px;
     color: rgb(55, 56, 103);
 }
 
 .main p {
     color: rgb(55, 56, 103);
     font-size: 15px;
-    margin-bottom: 15px;
 }
 
 .main-section {
@@ -91,13 +84,7 @@
 
 .features p {
     max-width: 205px;
-}
 
-.features-div
-{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
 .features li {
@@ -122,6 +109,13 @@
     margin-bottom: 10px;
 }
 
+.features-div
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .image-container {
     overflow: hidden;
     margin: 30px;
@@ -143,6 +137,16 @@
     transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .election {
@@ -176,10 +180,13 @@
 
 .election h4 {
     font-weight: bold;
+    text-align: center;
 }
 
 .election p{
     max-width: 340px;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 .history {
@@ -274,35 +281,47 @@
     text-decoration: none;
 }
 
-.flex {
-    display: flex;
-}
-
-.flex-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 @media (min-width: 1440px) {
+
     .wraper {
       margin: 20px 20px 0 300px;
     }
+
     .aside {
       display: block;
       width:300px;
       font-family: 'Roboto', sans-serif;
     }
+
+    .main h2 {
+        width: 501px;
+        max-width: 501px;
+        text-align: left;
+        color: rgb(55, 56, 103);
+        font-weight: bold;
+        font-size: 45px;
+    }
+
+    .main-section{
+        justify-content: space-between;
+    }
+
+    .main-section h4{
+        width: 700px;
+    }
+
+    .main-section p{
+        width: 700px;
+    }
+
     .election img {
         width: 255px;
-        height: 230px;
-        padding-right: 5px;
-        margin-right: 5px;
-        border-right: solid;
     }
+
     .election p{
         max-width: 255px;
     }
+
     .features li div {
         display: flex;
         padding: 15px;
