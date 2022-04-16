@@ -35,6 +35,12 @@ Created a css file to make the html created in WEEK 02 get style and form based 
 Remake the css using the command flex-box and making corrections in the html to make the webpag responsive in the resolutions 440px for mobiles, 768px for tablets and 1040px for desktops.
 The GitHub repository link is the follow: https://alvaroguardia.github.io/BaSP-M2022-Etapa-1
 
+### WEEK 05
+
+Using js, solve a list of suggested exercises provided by Radium Rocket. Each exercise description is displayed as a comment before the exercise code.
+
+Correct previous week asignment taking into account the tutor's suggested corrections.
+
 ## Contact info
 
   Alvaro Guardia
