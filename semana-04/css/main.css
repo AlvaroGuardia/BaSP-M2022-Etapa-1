@@ -299,6 +299,7 @@
 
     .main-section h4{
         width: 700px;
+        text-align: inherit;
     }
 
     .main-section p{
@@ -329,4 +330,11 @@
         flex-direction: row;
         justify-content: space-around;
     }
+
+    .features h4{
+        text-align: inherit;
+    }
+
 }
+
+
