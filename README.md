@@ -22,6 +22,10 @@ This is a file to learn how to use your new web of human resources.
  https://alvaroguardia.github.io/BaSP-M2022-Etapa-1/semana-04/index.html
 
 
+8-If you enter in the follow page you can see in the console of the website, the differents resolutions of the problematic of week 5:
+https://alvaroguardia.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
+
+
 ### WEEK 02
 
 Created Html based on a Figma desing. 
@@ -38,6 +42,7 @@ The GitHub repository link is the follow: https://alvaroguardia.github.io/BaSP-M
 ### WEEK 05
 
 Using js, solve a list of suggested exercises provided by Radium Rocket. Each exercise description is displayed as a comment before the exercise code.
+https://alvaroguardia.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
 
 Correct previous week asignment taking into account the tutor's suggested corrections.
 
