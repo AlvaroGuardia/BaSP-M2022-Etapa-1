@@ -105,7 +105,7 @@ window.onload = function () {
 
 	// Validate submit
 
-	var formButton = document.getElementsByTagName('button')[0];
+	var formButton = document.getElementsByTagName('button')[1];
 
 	formButton.addEventListener('click', submitVal);
 
@@ -132,16 +132,5 @@ window.onload = function () {
 			alert(dataOkValues.join('\n'));
 		}
 	}
-    
-	// Resset Button
-
-    var formButton2 = document.getElementsByTagName('button')[1];
-
-	formButton2.addEventListener('click', Resset);
-
-    // function.Resset{
-    //      location.reload();
-    // }
-
 
 };
