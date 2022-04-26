@@ -1,0 +1,119 @@
+.head-log{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: rgb(170, 206, 155);
+
+    font-style: normal;
+    font-weight: 700 bold;
+    font-size: 40px;
+    line-height: 45px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.singin {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 500px;
+    text-align: center;
+}
+  
+.form-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 83%;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    border-radius: 149px;
+    margin: 30 auto 20px auto;
+    padding: 30px;
+  }
+
+.ul-form {
+    width: 68%;
+    margin: auto;
+    list-style: none;
+}
+
+.li-block {
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    text-decoration: none;
+    margin: 35px 0 35px 0 ;
+    border-bottom: solid #FC6225 ;
+}
+
+.li-block label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color:black;
+}
+
+.li-block input {
+    margin-bottom: 5px solid black;
+    font-size: 18px;
+    font-family: 'Roboto';
+    font-style: 'bold';
+    border: none;
+    -webkit-appearance: none;
+}
+
+.li-block input::-webkit-outer-spin-button,
+.li-block input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.error {
+    margin-top: 5px;
+    font-size: 14px;
+    color: red;
+    visibility: hidden;
+}
+
+.remember {
+    margin: 10px 0px;
+}
+
+.form-btn {
+    margin: 15px auto 0 auto;
+    width: 68%;
+    height: 40px;
+    left: 0px;
+    top: 16px;
+    background-color: #AACE9B;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.form-btn a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.forgot {
+    margin: 20px;
+    text-align: center;
+    color: #0F43A8;
+}
+
+@media (min-width: 768px) {
+    .form-container{
+        width: 50%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .form-container{
+        width: 30%;
+    }
+}

@@ -1,0 +1,51 @@
+form {
+    width: 100%;
+}
+
+input[type=text] {
+    width: 45%;
+    padding: 4px 20px;
+    margin: 2px 27px 25px 0px;
+    box-sizing: border-box;
+    color: grey;
+}
+
+select {
+    width: 45%;
+    padding: 4px 20px;
+    margin: 2px 27px 25px 0px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 97%;
+    margin-bottom: 5px;
+    color: grey;
+}
+
+input[type=submit] {
+    width: 125px;
+    height: 37px;
+    left: 0px;
+    top: 16px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: #AACE9B;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    color: rgb(55, 56, 103);
+}
+
+input[type=reset] {
+    width: 125px;
+    height: 37px;
+    left: 0px;
+    top: 16px;
+    margin: 20;
+    background-color: #AACE9B;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    color: rgb(55, 56, 103);
+}

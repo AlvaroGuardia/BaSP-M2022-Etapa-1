@@ -1,0 +1,38 @@
+.header-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-bottom: 5px solid rgb(170, 206, 155);
+}
+
+.header-wraper img{
+    width: 30px;
+}
+
+.header-wraper h1 {
+    position: relative;
+    margin-left: 40px;
+    color: rgb(55, 56, 103);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin: 10px 0px 10px 23%;
+}
+
+.icon img {
+    padding: 8px;
+    width: 30px;
+    
+}
+
+.icon a{
+    text-decoration: none;
+}
