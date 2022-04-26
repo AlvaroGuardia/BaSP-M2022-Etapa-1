@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../styles/landing.css">
         <link rel="stylesheet" href="../styles/sidebar.css">
         <link rel="stylesheet" href="../styles/footer.css">
+        <script src="../javascript/contact.js"></script>
     </head>
     <body class="wraper">
         <sidebar class="aside">
@@ -228,15 +229,15 @@
                     </div>
                 </div>
             </section>
-            <section>            <!-- contact css in styles -->
+            <section class="contact">            <!-- contact css in styles -->
                 <h4>
                     <u>
                         Contact
                     </u>
                 </h4>
                 <form>
-                    <input type="text" id="fname" name="fname" value="Name">
-                    <input type="text" id="tname" name="fname" value="Email">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
                     <select name="OS">
                         <option selected value="0">
                             Contact Area 
@@ -252,9 +253,9 @@
                                 Cordoba
                             </option>
                     </select>
-                    <textarea name="message" rows="7" cols="45">Enter your message</textarea>
-                    <input type="submit" value="Send message">
-                    <input type="reset" value="Reset">
+                    <textarea name="message" rows="7" cols="45" placeholder="Enter your message"></textarea>
+                    <button type="button">Send message</button>
+                    <button type="button">Resset</button>
                 </form>
             </section>
             <section class="history">

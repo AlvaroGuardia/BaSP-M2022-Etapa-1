@@ -57,6 +57,7 @@
 }
 
 .learn-more {
+    height: 37px;
     padding: 7px 18px;
     margin: 30px 104px;
     border: 3px solid #AACE9B;
@@ -190,6 +191,11 @@
     max-width: 340px;
     padding-bottom: 10px;
     text-align: center;
+}
+
+.contact button{
+    width: 125px;
+    height: 37px;
 }
 
 .history {

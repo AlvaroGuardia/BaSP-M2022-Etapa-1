@@ -3,7 +3,7 @@ form {
 }
 
 input[type=text] {
-    width: 45%;
+    width: 100%;
     padding: 4px 20px;
     margin: 2px 27px 25px 0px;
     box-sizing: border-box;
@@ -11,14 +11,14 @@ input[type=text] {
 }
 
 select {
-    width: 45%;
+    width: 100%;
     padding: 4px 20px;
     margin: 2px 27px 25px 0px;
     box-sizing: border-box;
 }
 
 textarea {
-    width: 97%;
+    width: 100%;
     margin-bottom: 5px;
     color: grey;
 }
@@ -48,4 +48,17 @@ input[type=reset] {
     border: none;
     font-weight: bold;
     color: rgb(55, 56, 103);
+}
+
+@media (min-width: 1440px) {
+    input[type=text]{
+        width: 45%;
+    }
+    select{
+        width: 45%;
+    }
+    textarea{
+        width: 93%;
+    }
+
 }
