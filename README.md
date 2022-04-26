@@ -46,7 +46,7 @@ https://alvaroguardia.github.io/BaSP-M2022-Etapa-1/semana-05/index.html
 
 Correct previous week asignment taking into account the tutor's suggested corrections.
 
-### WEEK 05
+### WEEK 06
 
 Using js to make the validation of the new views of the login and sing-up. The js validate the fields with imputs in the new views to corroborte if the imputs were correct. Then, the button create an alert showing the error or submit the correct anwers.
 https://alvaroguardia.github.io/BaSP-M2022-Etapa-1/semana-06/views.html
