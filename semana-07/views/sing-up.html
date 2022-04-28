@@ -1,0 +1,203 @@
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=440px, initial-scale=1.0">
+    <title>Trackgenix</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/landing.css">
+    <link rel="stylesheet" href="../styles/sidebar.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/sing-up.css">
+    <script src="..//javascript/sing-up.js"></script>
+</head>
+
+<body class="wraper">
+    <sidebar class="aside">
+        <nav>
+            <h3 class="aside-menu">
+                Menu
+            </h3>
+            <ul class="list-item">
+                <li>
+                    <a href="../views/index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="../views/sing-up.html">
+                        SingUp
+                    </a>
+                </li>
+                <li>
+                    <a href="../views/login.html">
+                        Login
+                    </a>
+                </li>
+            </ul>
+            <h3 class="aside-get">
+                Get in touch
+            </h3>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+            <ul>
+                <li>
+                    <img href="#" src="../assets/email-logo.png">
+                    <a href="#">informacion@gmail.com</a>
+                </li>
+                <li>
+                    <img href="#" src="../assets/phone-logo.jpg" class="tel">
+                    <a href="#">
+                        (0341)123-4567
+                    </a>
+                </li>
+                <li>
+                    <img href="#" src="../assets/location-logo.png">
+                    <a>
+                        Mendoza 1234, Rosario, Argentina
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </sidebar>
+    <header class="header-wraper">
+        <div class="header-title">
+            <img src="../assets/icomenu.png" class="menu-bar">
+            <h1>
+                Trackgenix
+            </h1>
+        </div>
+        <div class="icon">
+            <a href="">
+                <img src="../assets\linkedin.png">
+            </a>
+            <a href="">
+                <img src="../assets\twitter.png">
+            </a>
+            <a href="">
+                <img src="../assets\facebook.png">
+            </a>
+            <a href="">
+                <img src="../assets\instagram.png">
+            </a>
+        </div>
+    </header>
+    <singup class="sing-up">
+        <div class="head-sing">
+            Radium Rocket
+            <br>
+            RRHH
+            </br>
+        </div>
+        <form class="form-container">
+            <div class="register">
+                <h2>
+                    Register
+                </h2>
+            </div>
+            <ul class="ul-form">
+                <li class="li-block">
+                    <label for="name">Name</label>
+                    <input type="text" />
+                    <div class="error">
+                        Invalid value. It must have at least 4 letters
+                    </div>
+                </li>
+                <li class="li-block">
+                    <label for="lname">Last name</label>
+                    <input type="text" />
+                    <div class="error">
+                        Invalid value. It must have at least 4 letters
+                    </div>
+                </li>
+                <li class="li-block">
+                    <label for="dni">DNI</label>
+                    <input type="number" />
+                    <div class="error">
+                        Invalid value. Must be only numbers and more than 7 characters
+                    </div>
+                </li>
+                <li class="li-block">
+                    <label for="age">Age (dd/mm/yyyy)</label>
+                    <input type="text" />
+                    <div class="error">
+                        Invalid value. Must be only numerical and more than 18
+                    </div>
+                </li>
+                <li class="li-block">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="number" />
+                    <div class="error">
+                        Invalid value. Must have 10 numerical characters. Don't use blanks,
+                        ( or -
+                    </div>
+                </li>
+                <li class="li-block">
+                    <label for="address">Address</label>
+                    <input type="text" />
+                    <div class="error">
+                        Invalid value. Must have at least 5 characters, numbers and a
+                        blank
+                    </div>
+                </li>
+                <li class="li-block">
+                    <label for="city">City of resident</label>
+                    <input type="text" />
+                    <div class="error">
+                        Invalid value. Must have at least 4 characters and numbers
+                    </div>
+                </li>
+                <li class="li-block">
+                    <label for="postal-code">Postal Code</label>
+                    <input type="number" />
+                    <div class="error">Invalid value. Must have between 4 and 5 numbers</div>
+                </li>
+                <li class="li-block">
+                    <label for="email">E-mail</label>
+                    <input type="text" />
+                    <div class="error">Invalid value. Missing email format</div>
+                </li>
+                <li class="li-block">
+                    <label for="password">Password</label>
+                    <input type="password" />
+                    <div class="error">
+                        Invalid value. At least 8 characters. Must have letters and
+                        numbers
+                    </div>
+                </li>
+                <li class="li-block">
+                    <label for="password-repeated">Repeat password</label>
+                    <input type="password" />
+                    <div class="error">Invalid value. The passwords doesn't match</div>
+                </li>
+            </ul>
+            <button type="button" class="form-btn">Create</button>
+        </form>
+    </singup>
+    <footer class="footer">
+        <div>
+            <a href="">
+                <img src="../assets\linkedin.png">
+            </a>
+            <a href="">
+                <img src="../assets\twitter.png">
+            </a>
+            <a href="">
+                <img src="../assets\facebook.png">
+            </a>
+            <a href="">
+                <img src="../assets\instagram.png">
+            </a>
+        </div>
+        Rosario, Argentina
+        <p>
+            Copyright &copy; 2022 Trackgenix SA. Al rights reserved
+        </p>
+    </footer>
+</body>
+
+</html>

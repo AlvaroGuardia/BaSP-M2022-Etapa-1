@@ -1,0 +1,55 @@
+form {
+    width: 100%;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 4px 20px;
+    margin: 2px 27px 25px 0px;
+    box-sizing: border-box;
+    color: grey;
+}
+
+select {
+    width: 100%;
+    padding: 4px 20px;
+    margin: 2px 27px 25px 0px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 5px;
+    color: grey;
+}
+
+button {
+    left: 0px;
+    top: 16px;
+    margin-top: 15px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    background-color: #AACE9B;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    color: rgb(55, 56, 103);
+}
+
+@media (min-width: 768px) {
+    input[type=text]{
+        width: 45%;
+    }
+    select{
+        width: 45%;
+    }
+    textarea{
+        width: 94%;
+    }
+}
+
+@media (min-width: 1440px) {
+    textarea{
+        width: 93%;
+    }
+}
