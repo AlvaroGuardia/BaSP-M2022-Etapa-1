@@ -45,6 +45,10 @@ window.onload = function () {
 	var errors = document.getElementsByClassName('error');
 	var inputsData = document.getElementsByTagName('input');
 
+	//Fill Values with the local storage
+
+	fillValues(inputsData)
+
 	// Inicializate global variables
 
 	var nameWarning = 1;
@@ -67,9 +71,9 @@ window.onload = function () {
 
 	// Characters allows
 
-	let num = [0,1,2,3,4,5,6,7,8,9];
-	let abc = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n",'ñ',"o","p","q","r","s","t","u","v","w","x","y","z"];
-	let specChar = ['+','-','_','@','*','?','$','^','#','.',];
+	var num = [0,1,2,3,4,5,6,7,8,9];
+	var abc = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n",'ñ',"o","p","q","r","s","t","u","v","w","x","y","z"];
+	var specChar = ['+','-','_','@','*','?','$','^','#','.',];
 
 	// Hide the error message on Focus
 
@@ -92,33 +96,33 @@ window.onload = function () {
 
 	inputsData[0].onblur = validateName;
 	function validateName() {
-		var name = inputsData[0].value;
-		var nameL = validateMinimumLenght(name, 4);
-		var gotBlank = lookForCharacter(name, ' ');
+		var fname = inputsData[0].value;
+		var nameL = validateMinimumLenght(fname, 4);
+		var gotBlank = lookForCharacter(fname, ' ');
 
-		let abcB = false;
-		let numB = false;
-		let specCharB = false;
+		var abcB = false;
+		var numB = false;
+		var specCharB = false;
 
-		for (let i = 0; i < name.length; i++) {
-            for (let j = 0; j < specChar.length; j++){
-                if (name[i] == specChar[j]){
+		for (var i = 0; i < fname.length; i++) {
+            for (var j = 0; j < specChar.length; j++){
+                if (fname[i] == specChar[j]){
                     specCharB = true;
                     break;}
             }
 		}
 			
-		for (let i = 0; i < name.length; i++){  
+		for (var i = 0; i < fname.length; i++){  
 				if (!numB){
-					for (let j = 0; j < num.length; j++){
-						if (name[i]==num[j]){
+					for (var j = 0; j < num.length; j++){
+						if (fname[i]==num[j]){
 							numB = true;
 							break;}  
 					} 
 				}
 				if (!abcB){
-					for (let j = 0; j < abc.length; j++){
-						if (name[i]==abc[j]){
+					for (var j = 0; j < abc.length; j++){
+						if (fname[i]==abc[j]){
 							abcB = true;
 							break;
 						}
@@ -144,28 +148,28 @@ window.onload = function () {
 		var lNameL = validateMinimumLenght(lName, 4);
 		var gotBlank = lookForCharacter(lName, ' ');
 
-		let abcC = false;
-		let numC = false;
-		let specCharC = false;
+		var abcC = false;
+		var numC = false;
+		var specCharC = false;
 
-		for (let i = 0; i < lName.length; i++) {
-            for (let j = 0; j < specChar.length; j++){
+		for (var i = 0; i < lName.length; i++) {
+            for (var j = 0; j < specChar.length; j++){
                 if (lName[i] == specChar[j]){
                     specCharC = true;
                     break;}
             }
 		}
 			
-		for (let i = 0; i < lName.length; i++){  
+		for (var i = 0; i < lName.length; i++){  
 				if (!numC){
-					for (let j = 0; j < num.length; j++){
+					for (var j = 0; j < num.length; j++){
 						if (lName[i]==num[j]){
 							numC = true;
 							break;}  
 					} 
 				}
 				if (!abcC){
-					for (let j = 0; j < abc.length; j++){
+					for (var j = 0; j < abc.length; j++){
 						if (lName[i]==abc[j]){
 							abcC = true;
 							break;
@@ -208,7 +212,7 @@ window.onload = function () {
 		var age = inputsData[3].value;
 		var passLength = validateMinimumLenght(age, 10);
 
-        for (let i = 0; i < age.length; i++)
+        for (var i = 0; i < age.length; i++)
         {
             if (i == 2 || i==5)
             {
@@ -253,11 +257,17 @@ window.onload = function () {
             monthLength[1] = 29;
 			ageWarning = 0;
         }
-        // Check the range of the day
-		ageWarning = 0
-        return day > 0 && day <= monthLength[month - 1];
-    }
-
+		// Check the range of the day
+		if(day > 0 && day <= monthLength[month - 1]){
+			ageWarning = 0
+			return true
+		}
+		else {
+			errors[3].style.visibility = 'visible';
+			ageWarning = 1
+			return false
+		}
+	}
 	// Validate phone number
 
 	inputsData[4].onblur = validatePhoneNumber;
@@ -283,21 +293,21 @@ window.onload = function () {
 		var addressL = validateMinimumLenght(address, 4);
 		var gotBlank = lookForCharacter(address, ' ');
 
-		let abcD = false;
-		let numD = false;
-		let specCharD = false;
+		var abcD = false;
+		var numD = false;
+		var specCharD = false;
 
-		for (let i = 0; i < address.length; i++) {
-            for (let j = 0; j < specChar.length; j++){
+		for (var i = 0; i < address.length; i++) {
+            for (var j = 0; j < specChar.length; j++){
                 if (address[i] == specChar[j]){
                     specCharD = true;
                     break;}
             }
 		}
 			
-		for (let i = 0; i < address.length; i++){  
+		for (var i = 0; i < address.length; i++){  
 				if (!numD){
-					for (let j = 0; j < num.length; j++){
+					for (var j = 0; j < num.length; j++){
 						if (address[i]==num[j]){
 							console.log(i)
 							numD = true;
@@ -305,7 +315,7 @@ window.onload = function () {
 					} 
 				}
 				if (!abcD){
-					for (let j = 0; j < abc.length; j++){
+					for (var j = 0; j < abc.length; j++){
 						if (address[i]==abc[j]){
 							abcD = true;
 							break;
@@ -332,28 +342,28 @@ window.onload = function () {
 		var cityL = validateMinimumLenght(city, 4);
 		var gotBlank = lookForCharacter(city, ' ');
 
-		let abcE = false;
-		let numE = false;
-		let specCharE = false;
+		var abcE = false;
+		var numE = false;
+		var specCharE = false;
 
-		for (let i = 0; i < city.length; i++) {
-            for (let j = 0; j < specChar.length; j++){
+		for (var i = 0; i < city.length; i++) {
+            for (var j = 0; j < specChar.length; j++){
                 if (city[i] == specChar[j]){
                     specCharE = true;
                     break;}
             }
 		}
 			
-		for (let i = 0; i < city.length; i++){  
+		for (var i = 0; i < city.length; i++){  
 				if (!numE){
-					for (let j = 0; j < num.length; j++){
+					for (var j = 0; j < num.length; j++){
 						if (city[i]==num[j]){
 							numE = true;
 							break;}  
 					} 
 				}
 				if (!abcE){
-					for (let j = 0; j < abc.length; j++){
+					for (var j = 0; j < abc.length; j++){
 						if (city[i]==abc[j]){
 							abcE = true;
 							break;
@@ -381,7 +391,7 @@ window.onload = function () {
 		var postalLength2 = validateMaxLenght(postalCode, 5);
 		var postalIsNumber = postalCode % 1;
 		if (postalLength1 == 1 && postalLength2 == 1  && postalIsNumber === 0) {
-			dniWarning = 0;
+			postalWarning = 0;
 			return;
 		} else {
 			errors[7].style.visibility = 'visible';
@@ -414,28 +424,28 @@ window.onload = function () {
 		var pass = inputsData[9].value;
 		var passLength = validateMinimumLenght(pass, 8);
 
-		let abcA = false;
-		let numA = false;
-		let specCharA = false;
+		var abcA = false;
+		var numA = false;
+		var specCharA = false;
 
-		for (let i = 0; i < pass.length; i++) {
-            for (let j = 0; j < specChar.length; j++){
+		for (var i = 0; i < pass.length; i++) {
+            for (var j = 0; j < specChar.length; j++){
                 if (pass[i] == specChar[j]){
                     specCharA = true;
                     break;}
             }
 		}
 			
-		for (let i = 0; i < pass.length; i++){  
+		for (var i = 0; i < pass.length; i++){  
 				if (!numA){
-					for (let j = 0; j < num.length; j++){
+					for (var j = 0; j < num.length; j++){
 						if (pass[i]==num[j]){
 							numA = true;
 							break;}  
 					} 
 				}
 				if (!abcA){
-					for (let j = 0; j < abc.length; j++){
+					for (var j = 0; j < abc.length; j++){
 						if (pass[i]==abc[j]){
 							abcA = true;
 							break;
@@ -464,8 +474,7 @@ window.onload = function () {
 	function validateRepPassword() {
 		var pass = inputsData[9].value;
 		var rPass = inputsData[10].value;
-		var isSamePass = lookForCharacter(rPass, pass);
-		if (isSamePass === 1 && pass.length === rPass.length) {
+		if (pass == rPass) {
 			rePasswordWarning = 0;
 			return;
 		} else {
@@ -483,7 +492,6 @@ window.onload = function () {
 
 	function submitVal() {
 		var messageAlert = [];
-		var dataOkValues = ['The next information is going to submit: '];
 		if (nameWarning === 1) {
 			messageAlert.push('Name: ' + errors[0].innerHTML);
 			alertWarning = 1;
@@ -532,52 +540,76 @@ window.onload = function () {
 			alert('Submit failed. Wrong data entry in the category of: \n' + messageAlert.join('\n'));
 			alertWarning = 0;
 		} else {
+				sendRqst(inputsData)
+			}
+				function sendRqst(inputsData)
+				{
+					const usp = new URLSearchParams (
+						{
+							name : inputsData[0].value,
+							lastName : inputsData[1].value,
+							dni: inputsData[2].value,
+							dob: inputsData[3].value,
+							phone: inputsData[4].value,
+							address: inputsData[5].value,
+							city: inputsData[6].value,
+							zip : inputsData[7].value,
+							email : inputsData[8].value,
+							password : inputsData[9].value
+						}
+					);
+					const request = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?'+ usp;
+					fetch (request)
+					.then(function(response)
+					{
+						return response.json();
+					})
+					.then(function(response)
+					{
+						if (!response.success)
+						{
+							var unifiedError = '';
+							console.log (response.errors.length)
+							for (var i =0; i<response.errors.length; i++)
+							{
+								unifiedError += '\n' + response.errors[i].msg
+							}
+							throw new Error(unifiedError);
+						}
+							alert('Request successful\n' + response.msg);
+						localStrg();
+					})
+					.catch(error=>
+					{
+						console.log(error)
+						alert('there has been a problem.' + '\n' +  error)
+					});
 
+					function localStrg(){
+						localStorage.setItem('firstName',inputsData[0].value);
+						localStorage.setItem('lastName',inputsData[1].value);
+						localStorage.setItem('dni',inputsData[2].value);
+						localStorage.setItem('age',inputsData[3].value);
+						localStorage.setItem('phone',inputsData[4].value);
+						localStorage.setItem('address',inputsData[5].value);
+						localStorage.setItem('city',inputsData[6].value);
+						localStorage.setItem('postal',inputsData[7].value);
+						localStorage.setItem('email',inputsData[8].value);
+						localStorage.setItem('password',inputsData[9].value);
+					}
+				}
 		}
+	function fillValues(inputsData){
+		inputsData[0].value = localStorage.getItem('firstName');
+		inputsData[1].value = localStorage.getItem('lastName');
+		inputsData[2].value = localStorage.getItem('dni');
+		inputsData[3].value = localStorage.getItem('age');
+		inputsData[4].value = localStorage.getItem('phone');
+		inputsData[5].value = localStorage.getItem('address');
+		inputsData[6].value = localStorage.getItem('city');
+		inputsData[7].value = localStorage.getItem('postal');
+		inputsData[8].value = localStorage.getItem('email');
+		inputsData[9].value = localStorage.getItem('password');
+		inputsData[10].value = localStorage.getItem('password');
 	}
-};
-
-function sendRqst()
-{
-    const usp = new URLSearchParams (
-        {
-            name : fname.value,
-            lastName : lname.value,
-            dni: dni.value,
-            dob: bdate.value,
-            phone: pnumber.value,
-            address: address.value,
-            city: city.value,
-            zip : pcode.value,
-            email : email.value,
-            password : pass.value
-        }
-    );
-    const request = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?'+ usp;
-    fetch (request)
-    .then(function(response)
-    {
-        return response.json();
-    })
-    .then(function(response)
-    {
-        if (!response.success)
-        {
-            var unifiedError = '';
-            console.log (response.errors.length)
-            for (var i =0; i<response.errors.length; i++)
-            {
-                unifiedError += '\n' + response.errors[i].msg
-            }
-            throw new Error(unifiedError);
-        }
-        	alert('Request successful\n' + response.msg);
-        localStrg();
-    })
-    .catch(error=>
-    {
-        console.log(error)
-        alert('there has been a problem.' + '\n' +  error)
-    });
-
-	
+}

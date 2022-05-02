@@ -39,9 +39,9 @@ window.onload = function () {
 
 	// Characters allows
 
-	let num = [0,1,2,3,4,5,6,7,8,9];
-	let abc = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n",'ñ',"o","p","q","r","s","t","u","v","w","x","y","z"];
-	let specChar = ['+','-','_','@','*','?','$','^','#','.',];
+	var num = [0,1,2,3,4,5,6,7,8,9];
+	var abc = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n",'ñ',"o","p","q","r","s","t","u","v","w","x","y","z"];
+	var specChar = ['+','-','_','@','*','?','$','^','#','.',];
 
 	// Hide the error message on Focus
 
@@ -76,28 +76,28 @@ window.onload = function () {
 		var pass = inputsData[1].value;
 		var passLength = validateMinimumLenght(pass, 8);
 
-		let abcA = false;
-		let numA = false;
-		let specCharA = false;
+		var abcA = false;
+		var numA = false;
+		var specCharA = false;
 
-		for (let i = 0; i < pass.length; i++) {
-            for (let j = 0; j < specChar.length; j++){
+		for (var i = 0; i < pass.length; i++) {
+            for (var j = 0; j < specChar.length; j++){
                 if (pass[i] == specChar[j]){
                     specCharA = true;
                     break;}
             }
 		}
 			
-		for (let i = 0; i < pass.length; i++){  
+		for (var i = 0; i < pass.length; i++){  
 				if (!numA){
-					for (let j = 0; j < num.length; j++){
+					for (var j = 0; j < num.length; j++){
 						if (pass[i]==num[j]){
 							numA = true;
 							break;}  
 					} 
 				}
 				if (!abcA){
-					for (let j = 0; j < abc.length; j++){
+					for (var j = 0; j < abc.length; j++){
 						if (pass[i]==abc[j]){
 							abcA = true;
 							break;
