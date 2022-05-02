@@ -128,7 +128,6 @@ window.onload = function () {
 
 	function submitVal() {
 		var messageAlert = [];
-		var dataOkValues = ['The next information is going to submit: '];
 		if (emailWarning === 1) {
 			messageAlert.push('E-mail: ' + errors[0].innerHTML);
 			alertWarning = 1;
@@ -142,11 +141,30 @@ window.onload = function () {
 			alertWarning = 0;
 		} 
 		else  {
-			for (var i = 0; i < inputsData.length; i++) {
-				dataOkValues.push(inputsData[i].value);
-			}
-			alert('Submit Corret');
-			alert(dataOkValues.join('\n'));
+			submitInfo(alertWarning)
 		}
 	}
+	
+
+function submitInfo(alertWarning) {
+	 if ( alertWarning == 0 ) {
+	   var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login';
+   
+	   fetch(url.concat('?email=', inputsData[0].value, '&password=', inputsData[1].value))
+		 .then(function(response){
+		   return response.json();
+		 })
+	   
+		 .then(function(data){
+			if (data.success){
+				alert('Submit Corret');
+				console.log(data.msg);
+				alert(data.msg)}
+			else {throw new Error (data.msg)}
+		 })
+		 .catch(error => {
+			alert(error);
+		 })
+	 }
+   }
 };

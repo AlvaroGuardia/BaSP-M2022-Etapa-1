@@ -228,8 +228,8 @@ window.onload = function () {
             return false;
         }
         var parts = age.split("/");
-        var day = parseInt(parts[0], 10);
-        var month = parseInt(parts[1], 10);
+        var month = parseInt(parts[0], 10);
+        var day = parseInt(parts[1], 10);
         var year = parseInt(parts[2], 10);
         var now = parseInt(new Date().toISOString().slice(0, 10).replace(/-/g, ''));
         var dob = year * 10000 + month * 100 + day * 1;
@@ -532,10 +532,52 @@ window.onload = function () {
 			alert('Submit failed. Wrong data entry in the category of: \n' + messageAlert.join('\n'));
 			alertWarning = 0;
 		} else {
-			for (var i = 0; i < inputsData.length; i++) {
-				dataOkValues.push(inputsData[i].value);
-			}
-			alert(dataOkValues.join('\n'));
+
 		}
 	}
 };
+
+function sendRqst()
+{
+    const usp = new URLSearchParams (
+        {
+            name : fname.value,
+            lastName : lname.value,
+            dni: dni.value,
+            dob: bdate.value,
+            phone: pnumber.value,
+            address: address.value,
+            city: city.value,
+            zip : pcode.value,
+            email : email.value,
+            password : pass.value
+        }
+    );
+    const request = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?'+ usp;
+    fetch (request)
+    .then(function(response)
+    {
+        return response.json();
+    })
+    .then(function(response)
+    {
+        if (!response.success)
+        {
+            var unifiedError = '';
+            console.log (response.errors.length)
+            for (var i =0; i<response.errors.length; i++)
+            {
+                unifiedError += '\n' + response.errors[i].msg
+            }
+            throw new Error(unifiedError);
+        }
+        	alert('Request successful\n' + response.msg);
+        localStrg();
+    })
+    .catch(error=>
+    {
+        console.log(error)
+        alert('there has been a problem.' + '\n' +  error)
+    });
+
+	
