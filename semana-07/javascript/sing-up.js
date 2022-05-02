@@ -540,65 +540,73 @@ window.onload = function () {
 			alert('Submit failed. Wrong data entry in the category of: \n' + messageAlert.join('\n'));
 			alertWarning = 0;
 		} else {
-				sendRqst(inputsData)
+			sendRqst(inputsData)
 			}
-				function sendRqst(inputsData)
-				{
-					const usp = new URLSearchParams (
-						{
-							name : inputsData[0].value,
-							lastName : inputsData[1].value,
-							dni: inputsData[2].value,
-							dob: inputsData[3].value,
-							phone: inputsData[4].value,
-							address: inputsData[5].value,
-							city: inputsData[6].value,
-							zip : inputsData[7].value,
-							email : inputsData[8].value,
-							password : inputsData[9].value
-						}
-					);
-					const request = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?'+ usp;
-					fetch (request)
-					.then(function(response)
-					{
-						return response.json();
-					})
-					.then(function(response)
-					{
-						if (!response.success)
-						{
-							var unifiedError = '';
-							console.log (response.errors.length)
-							for (var i =0; i<response.errors.length; i++)
-							{
-								unifiedError += '\n' + response.errors[i].msg
-							}
-							throw new Error(unifiedError);
-						}
-							alert('Request successful\n' + response.msg);
-						localStrg();
-					})
-					.catch(error=>
-					{
-						console.log(error)
-						alert('there has been a problem.' + '\n' +  error)
-					});
-
-					function localStrg(){
-						localStorage.setItem('firstName',inputsData[0].value);
-						localStorage.setItem('lastName',inputsData[1].value);
-						localStorage.setItem('dni',inputsData[2].value);
-						localStorage.setItem('age',inputsData[3].value);
-						localStorage.setItem('phone',inputsData[4].value);
-						localStorage.setItem('address',inputsData[5].value);
-						localStorage.setItem('city',inputsData[6].value);
-						localStorage.setItem('postal',inputsData[7].value);
-						localStorage.setItem('email',inputsData[8].value);
-						localStorage.setItem('password',inputsData[9].value);
-					}
-				}
 		}
+
+	// Request of the inputs of the form
+
+	function sendRqst(inputsData){
+
+		const usp = new URLSearchParams (
+			{
+				name : inputsData[0].value,
+				lastName : inputsData[1].value,
+				dni: inputsData[2].value,
+				dob: inputsData[3].value,
+				phone: inputsData[4].value,
+				address: inputsData[5].value,
+				city: inputsData[6].value,
+				zip : inputsData[7].value,
+				email : inputsData[8].value,
+				password : inputsData[9].value
+			}
+		);
+		const request = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?'+ usp;
+		fetch (request)
+		.then(function(response)
+		{
+			return response.json();
+		})
+		.then(function(response)
+		{
+			if (!response.success)
+			{
+				var unifiedError = '';
+				console.log (response.errors.length)
+				for (var i =0; i<response.errors.length; i++)
+				{
+					unifiedError += '\n' + response.errors[i].msg
+				}
+				throw new Error(unifiedError);
+			}
+				alert('Request successful\n' + response.msg);
+			localStrg();
+		})
+		.catch(error=>
+		{
+			console.log(error)
+			alert('there has been a problem.' + '\n' +  error)
+		});
+	}
+
+	//Storage in local memory validate by APIs
+
+	function localStrg(){
+		localStorage.setItem('firstName',inputsData[0].value);
+		localStorage.setItem('lastName',inputsData[1].value);
+		localStorage.setItem('dni',inputsData[2].value);
+		localStorage.setItem('age',inputsData[3].value);
+		localStorage.setItem('phone',inputsData[4].value);
+		localStorage.setItem('address',inputsData[5].value);
+		localStorage.setItem('city',inputsData[6].value);
+		localStorage.setItem('postal',inputsData[7].value);
+		localStorage.setItem('email',inputsData[8].value);
+		localStorage.setItem('password',inputsData[9].value);
+	}
+
+	//Use the localStorage to refresh the page with the preload fiels
+
 	function fillValues(inputsData){
 		inputsData[0].value = localStorage.getItem('firstName');
 		inputsData[1].value = localStorage.getItem('lastName');

@@ -36,7 +36,6 @@ window.onload = function () {
 	var mailRegex = /@/;
 	var dotComRegex = /.com/;
 
-
 	// Characters allows
 
 	var num = [0,1,2,3,4,5,6,7,8,9];
@@ -145,26 +144,27 @@ window.onload = function () {
 		}
 	}
 	
+	//Realize the request ussing fetch and validate with the server
 
-function submitInfo(alertWarning) {
-	 if ( alertWarning == 0 ) {
-	   var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login';
-   
-	   fetch(url.concat('?email=', inputsData[0].value, '&password=', inputsData[1].value))
-		 .then(function(response){
-		   return response.json();
-		 })
-	   
-		 .then(function(data){
-			if (data.success){
-				alert('Submit Corret');
-				console.log(data.msg);
-				alert(data.msg)}
-			else {throw new Error (data.msg)}
-		 })
-		 .catch(error => {
-			alert(error);
-		 })
-	 }
-   }
+	function submitInfo(alertWarning) {
+		if ( alertWarning == 0 ) {
+		var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login';
+	
+		fetch(url.concat('?email=', inputsData[0].value, '&password=', inputsData[1].value))
+			.then(function(response){
+			return response.json();
+			})
+		
+			.then(function(data){
+				if (data.success){
+					alert('Submit Corret');
+					console.log(data.msg);
+					alert(data.msg)}
+				else {throw new Error (data.msg)}
+			})
+			.catch(error => {
+				alert(error);
+			})
+		}
+	}
 };
