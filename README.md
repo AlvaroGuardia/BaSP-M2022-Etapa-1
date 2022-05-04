@@ -54,7 +54,7 @@ https://alvaroguardia.github.io/BaSP-M2022-Etapa-1/semana-06/views.html
 ### WEEK 07
 
 Starting to use the promise and callback functions to connect the api's service with the backend and make the page work properly.Use Modal Windows in the succesfull login in the APi.
-https://alvaroguardia.github.io/BaSP-M2022-Etapa-1/semana-06/views.html
+https://alvaroguardia.github.io/BaSP-M2022-Etapa-1/semana-07/views.html
 
 ## Contact info
 
