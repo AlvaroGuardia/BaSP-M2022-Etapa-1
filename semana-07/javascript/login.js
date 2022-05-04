@@ -157,9 +157,8 @@ window.onload = function () {
 		
 			.then(function(data){
 				if (data.success){
-					alert('Submit Corret');
-					console.log(data.msg);
-					alert(data.msg)}
+					swal('Submit Corret',data.msg,'success');
+					console.log(data.msg);}
 				else {throw new Error (data.msg)}
 			})
 			.catch(error => {
